@@ -1,0 +1,26 @@
+# Canonical metadata for the Blank App — the default "Create New App" template.
+#
+# Consumed by:
+#   - scripts/build-manifest.sh (CI) → POST /internal/agentic_coding/sandbox_images/build
+#   - the BE's SyncManifest interactor (single writer of agentic_coding_templates)
+#
+# status: draft — blank is NOT surfaced in the user-facing template gallery
+# (the public GET /agentic_coding/templates endpoint filters status: :active).
+# It still serves as the DEFAULT boot image: Sandbox::Providers::Modal
+# #resolve_image_id resolves the "Create New App" path via
+# Template.find_by(slug: "blank"), which is unscoped by status — so a draft row
+# is sufficient for the default-app cutover. Promote to `active` only when
+# product wants blank to also appear as a pickable tile.
+#
+# image_id is intentionally ABSENT: the CI pipeline imports the docker_tag into
+# Modal and injects the resolved image_id during sync (SyncJob → SyncManifest).
+# repo_url is not a synced field, so it is omitted too.
+
+name: Blank App
+slug: blank
+status: draft
+category: other
+description: Start from a clean slate.
+prompt: ""
+# TODO(product): supply the real gallery icon asset before promoting to active.
+icon: ""

@@ -1,0 +1,21 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]: Platform
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]: Login to your account
+        - generic [ref=e15]: Enter your email below to login to your account
+      - generic [ref=e18]:
+        - group [ref=e19]:
+          - generic [ref=e20]: Email
+          - textbox "Email" [ref=e21]:
+            - /placeholder: m@example.com
+        - group [ref=e22]:
+          - generic [ref=e23]: Password
+          - textbox "Password" [ref=e24]:
+            - /placeholder: "********"
+        - group [ref=e25]:
+          - button "Login" [ref=e26]
+          - paragraph [ref=e27]: Don't have an account? Contact your administrator to get access.
+    - paragraph [ref=e28]: © 2026 Platform. All rights reserved.
+  - region "Notifications alt+T"

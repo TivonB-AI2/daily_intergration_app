@@ -1,0 +1,1 @@
+ALTER TABLE "animated_themes" ADD COLUMN "is_active" boolean DEFAULT false NOT NULL;

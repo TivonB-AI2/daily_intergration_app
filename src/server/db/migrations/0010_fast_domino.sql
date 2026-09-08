@@ -1,0 +1,1 @@
+ALTER TABLE "custom_themes" ADD COLUMN "background_key" text;

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "*": "allow",
+    "read": {
+      "*": "allow",
+      "*.env": "allow",
+      "*.env.*": "allow"
+    },
+    "edit": {
+      "*": "allow",
+      "src/server/s3/client.ts": "deny",
+      "src/env/server.ts": "deny",
+      ".env.local": "deny",
+      ".env.example": "deny"
+    },
+    "write": {
+      "*": "allow",
+      "src/server/s3/client.ts": "deny",
+      "src/env/server.ts": "deny",
+      ".env.local": "deny",
+      ".env.example": "deny"
+    },
+    "question": "deny",
+    "mcp": {
+      "agentic_coding_request_database": "allow"
+    }
+  },
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": ["playwright-mcp"],
+      "enabled": true
+    }
+  },
+  "compaction": {
+    "auto": true,
+    "prune": true
+  }
+}
