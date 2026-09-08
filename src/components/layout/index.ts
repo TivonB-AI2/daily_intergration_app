@@ -16,7 +16,6 @@ import {
   BookOpenText,
   FileStack,
   FolderOutput,
-  KeyRound,
   Layers,
   BookMarked,
   Users,
@@ -73,7 +72,6 @@ export const routes: NavEntry[] = [
     label: "Platform",
     items: [
       { title: "Connectors", url: "/connectors", icon: Plug },
-      { title: "Secrets", url: "/secrets", icon: KeyRound },
       { title: "Workflows", url: "/workflows", icon: Workflow },
     ],
   },

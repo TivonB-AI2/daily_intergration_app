@@ -65,7 +65,6 @@ const SEARCH_KEYWORDS: Record<string, string> = {
   "/brand-assets": "logo icons fonts branding",
   "/workflows": "automation runs",
   "/connectors": "data sources integrations",
-  "/secrets": "api keys vault",
   "/insights": "ai analysis questions live data metrics charts",
   "/saved-reports": "natural language sql questions reports",
   "/knowledge-base": "search documents semantic",

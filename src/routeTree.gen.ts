@@ -29,7 +29,6 @@ import { Route as ProtectedKnowledgeBaseRouteImport } from './routes/_protected/
 import { Route as ProtectedPromptLibraryRouteImport } from './routes/_protected/prompt-library'
 import { Route as ProtectedRolesPermissionsRouteImport } from './routes/_protected/roles-permissions'
 import { Route as ProtectedSavedReportsRouteImport } from './routes/_protected/saved-reports'
-import { Route as ProtectedSecretsRouteImport } from './routes/_protected/secrets'
 import { Route as ProtectedSettingsRouteImport } from './routes/_protected/settings'
 import { Route as ProtectedStorageRouteImport } from './routes/_protected/storage'
 import { Route as ProtectedSystemRouteImport } from './routes/_protected/system'
@@ -139,11 +138,6 @@ const ProtectedSavedReportsRoute = ProtectedSavedReportsRouteImport.update({
   path: '/saved-reports',
   getParentRoute: () => ProtectedRoute,
 } as any)
-const ProtectedSecretsRoute = ProtectedSecretsRouteImport.update({
-  id: '/secrets',
-  path: '/secrets',
-  getParentRoute: () => ProtectedRoute,
-} as any)
 const ProtectedSettingsRoute = ProtectedSettingsRouteImport.update({
   id: '/settings',
   path: '/settings',
@@ -200,7 +194,6 @@ export interface FileRoutesByFullPath {
   '/prompt-library': typeof ProtectedPromptLibraryRoute
   '/roles-permissions': typeof ProtectedRolesPermissionsRoute
   '/saved-reports': typeof ProtectedSavedReportsRoute
-  '/secrets': typeof ProtectedSecretsRoute
   '/settings': typeof ProtectedSettingsRoute
   '/storage': typeof ProtectedStorageRoute
   '/system': typeof ProtectedSystemRoute
@@ -228,7 +221,6 @@ export interface FileRoutesByTo {
   '/prompt-library': typeof ProtectedPromptLibraryRoute
   '/roles-permissions': typeof ProtectedRolesPermissionsRoute
   '/saved-reports': typeof ProtectedSavedReportsRoute
-  '/secrets': typeof ProtectedSecretsRoute
   '/settings': typeof ProtectedSettingsRoute
   '/storage': typeof ProtectedStorageRoute
   '/system': typeof ProtectedSystemRoute
@@ -259,7 +251,6 @@ export interface FileRoutesById {
   '/_protected/prompt-library': typeof ProtectedPromptLibraryRoute
   '/_protected/roles-permissions': typeof ProtectedRolesPermissionsRoute
   '/_protected/saved-reports': typeof ProtectedSavedReportsRoute
-  '/_protected/secrets': typeof ProtectedSecretsRoute
   '/_protected/settings': typeof ProtectedSettingsRoute
   '/_protected/storage': typeof ProtectedStorageRoute
   '/_protected/system': typeof ProtectedSystemRoute
@@ -291,7 +282,6 @@ export interface FileRouteTypes {
     | '/prompt-library'
     | '/roles-permissions'
     | '/saved-reports'
-    | '/secrets'
     | '/settings'
     | '/storage'
     | '/system'
@@ -319,7 +309,6 @@ export interface FileRouteTypes {
     | '/prompt-library'
     | '/roles-permissions'
     | '/saved-reports'
-    | '/secrets'
     | '/settings'
     | '/storage'
     | '/system'
@@ -349,7 +338,6 @@ export interface FileRouteTypes {
     | '/_protected/prompt-library'
     | '/_protected/roles-permissions'
     | '/_protected/saved-reports'
-    | '/_protected/secrets'
     | '/_protected/settings'
     | '/_protected/storage'
     | '/_protected/system'
@@ -509,13 +497,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProtectedSavedReportsRouteImport
       parentRoute: typeof ProtectedRoute
     }
-    '/_protected/secrets': {
-      id: '/_protected/secrets'
-      path: '/secrets'
-      fullPath: '/secrets'
-      preLoaderRoute: typeof ProtectedSecretsRouteImport
-      parentRoute: typeof ProtectedRoute
-    }
     '/_protected/settings': {
       id: '/_protected/settings'
       path: '/settings'
@@ -585,7 +566,6 @@ interface ProtectedRouteChildren {
   ProtectedPromptLibraryRoute: typeof ProtectedPromptLibraryRoute
   ProtectedRolesPermissionsRoute: typeof ProtectedRolesPermissionsRoute
   ProtectedSavedReportsRoute: typeof ProtectedSavedReportsRoute
-  ProtectedSecretsRoute: typeof ProtectedSecretsRoute
   ProtectedSettingsRoute: typeof ProtectedSettingsRoute
   ProtectedStorageRoute: typeof ProtectedStorageRoute
   ProtectedSystemRoute: typeof ProtectedSystemRoute
@@ -612,7 +592,6 @@ const ProtectedRouteChildren: ProtectedRouteChildren = {
   ProtectedPromptLibraryRoute: ProtectedPromptLibraryRoute,
   ProtectedRolesPermissionsRoute: ProtectedRolesPermissionsRoute,
   ProtectedSavedReportsRoute: ProtectedSavedReportsRoute,
-  ProtectedSecretsRoute: ProtectedSecretsRoute,
   ProtectedSettingsRoute: ProtectedSettingsRoute,
   ProtectedStorageRoute: ProtectedStorageRoute,
   ProtectedSystemRoute: ProtectedSystemRoute,
